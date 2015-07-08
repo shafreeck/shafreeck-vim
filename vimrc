@@ -33,3 +33,7 @@ nmap <Leader>t :TagbarToggle<CR>
 nmap <Leader>S :VimShell<CR>
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
+" vim-go
+nmap <Leader>b :GoBuild<CR>
+nmap <Leader>r :GoRun<CR>
+nmap <Leader>i :GoImport<CR>
