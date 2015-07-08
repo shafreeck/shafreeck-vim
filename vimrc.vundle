@@ -26,7 +26,7 @@ Plugin 'rking/ag.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'fatih/vim-go'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 """""""""""""""""""""
 
 " All of your Plugins must be added before the following line
