@@ -25,6 +25,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'rking/ag.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
+Plugin 'fatih/vim-go'
 """""""""""""""""""""
 
 " All of your Plugins must be added before the following line
