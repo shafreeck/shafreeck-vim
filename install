@@ -1,9 +1,11 @@
 #!/bin/bash
 # Just tested on vim 7.4+
+trap exit ERR
 D=`pwd`
 ln -s $D/vimrc ~/.vimrc
 ln -s $D/vimrc.vundle ~/.vimrc.vundle
 mkdir -p ~/.vim/bundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
 (cd ~/.vim/bundle/YouCompleteMe/ && ./install.sh)
