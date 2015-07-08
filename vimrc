@@ -31,3 +31,5 @@ nmap <tab> :bn<CR>
 nmap <Leader>t :TagbarToggle<CR>
 " vimshell
 nmap <Leader>S :VimShell<CR>
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion = 1
