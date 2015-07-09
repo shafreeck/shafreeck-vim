@@ -27,6 +27,7 @@ nmap <Leader>f :NERDTreeToggle<CR>
 "set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 nmap <tab> :bn<CR>
+nmap <S-tab> :bp<CR>
 " tabbar
 nmap <Leader>t :TagbarToggle<CR>
 " vimshell
