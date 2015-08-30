@@ -5,18 +5,19 @@ D=`pwd`
 ln -s $D/vimrc ~/.vimrc
 ln -s $D/vimrc.vundle ~/.vimrc.vundle
 mkdir -p ~/.vim/bundle
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/bling/vim-airline.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/rking/ag.vim.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/Shougo/vimproc.vim.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/Shougo/vimshell.vim.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/Vundle.vim
+cd ~/.vim/bundle
+git clone https://github.com/gmarik/Vundle.vim.git
+git clone https://github.com/tpope/vim-fugitive.git
+git clone https://github.com/Valloric/YouCompleteMe.git
+git clone https://github.com/kien/ctrlp.vim.git
+git clone https://github.com/scrooloose/nerdtree.git
+git clone https://github.com/bling/vim-airline.git
+git clone https://github.com/majutsushi/tagbar.git
+git clone https://github.com/rking/ag.vim.git
+git clone https://github.com/Shougo/vimproc.vim.git
+git clone https://github.com/Shougo/vimshell.vim.git
+git clone https://github.com/fatih/vim-go.git
+git clone https://github.com/scrooloose/syntastic.git
 #vim +PluginInstall +qall
 
 (cd ~/.vim/bundle/YouCompleteMe/ && ./install.sh --clang-completer --golang-completer)
