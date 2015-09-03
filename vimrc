@@ -6,6 +6,7 @@ set incsearch
 set nocompatible
 set expandtab
 set shiftwidth=4
+set tabstop=4
 set smartindent
 set smartcase
 
@@ -15,10 +16,10 @@ filetype indent on
 
 
 " remember the cursor last open
-autocmd BufReadPost *
-  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-  \   exe "normal! g'\"" |
-  \ endif
+"autocmd BufReadPost *
+"  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+"  \   exe "normal! g'\"" |
+"  \ endif
 
 let mapleader = ";"
 """" third party plugins """"
@@ -48,6 +49,7 @@ nmap <Leader>S :VimShell<CR>
 " YouCompleteMe
 "let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+nnoremap <leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " vim-go
 nmap <Leader>b :GoBuild<CR>
 nmap <Leader>r :GoRun<CR>
