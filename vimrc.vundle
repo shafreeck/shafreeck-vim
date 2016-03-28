@@ -26,6 +26,7 @@ Plugin 'rking/ag.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'fatih/vim-go'
+Plugin 'cespare/vim-toml'
 "Plugin 'scrooloose/syntastic'
 """""""""""""""""""""
 
