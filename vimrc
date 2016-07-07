@@ -14,6 +14,9 @@ syntax on
 filetype on
 filetype indent on
 
+" more beautiful color
+set t_Co=256
+
 
 " remember the cursor last open
 "autocmd BufReadPost *
