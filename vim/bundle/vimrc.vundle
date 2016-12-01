@@ -17,6 +17,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 """""""""""""""""""""
+Plugin 'flazz/vim-colorschemes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
@@ -26,8 +27,12 @@ Plugin 'rking/ag.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'fatih/vim-go'
-Plugin 'cespare/vim-toml'
-"Plugin 'scrooloose/syntastic'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+"Plugin 'jiangmiao/auto-pairs'
+Plugin 'rust-lang/rust.vim'
+Plugin 'rdnetto/YCM-Generator'
+Plugin 'adwpc/cscopex'
+Plugin 'vim-syntastic/syntastic'
 """""""""""""""""""""
 
 " All of your Plugins must be added before the following line
