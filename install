@@ -1,12 +1,16 @@
 #!/bin/bash
 # Just tested on vim 7.4+
 trap exit ERR
-D=`pwd`
-ln -s $D/vimrc ~/.vimrc
-ln -s $D/vimrc.vundle ~/.vimrc.vundle
-mkdir -p ~/.vim/bundle
+
+mv -f ~/.vim ~/.vim.old
+mv -f ~/.vimrc ~/.vimrc.old
+
+cp vimrc ~/.vimrc
+cp -rf vim ~/.vim
+
 cd ~/.vim/bundle
 git clone https://github.com/gmarik/Vundle.vim.git
+git clone https://github.com/flazz/vim-colorschemes.git
 git clone https://github.com/tpope/vim-fugitive.git
 git clone https://github.com/Valloric/YouCompleteMe.git
 git clone https://github.com/kien/ctrlp.vim.git
@@ -17,9 +21,18 @@ git clone https://github.com/rking/ag.vim.git
 git clone https://github.com/Shougo/vimproc.vim.git
 git clone https://github.com/Shougo/vimshell.vim.git
 git clone https://github.com/fatih/vim-go.git
-git clone https://github.com/scrooloose/syntastic.git
-#vim +PluginInstall +qall
+git clone https://github.com/rust-lang/rust.vim.git
+git clone https://github.com/rdnetto/YCM-Generator.git
+git clone https://github.com/octol/vim-cpp-enhanced-highlight.git
+git clone https://github.com/adwpc/cscopex.git
+git clone https://github.com/vim-syntastic/syntastic.git
+
+# Install plugins.
+vim -u ~/.vimrc -c ":PluginInstall" -c ":q" -c ":q"
 
 (cd ~/.vim/bundle/YouCompleteMe/ && git submodule update --init --recursive \
-    && ./install.py --clang-completer --gocode-completer)
+    && ./install.py --all)
 (cd ~/.vim/bundle/vimproc.vim/ && make)
+
+# Install golang binaries tools.
+vim -u ~/.vimrc -c ":GoInstallBinaries" -c ":q" /tmp/tmp.go
